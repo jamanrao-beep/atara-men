@@ -1,26 +1,88 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Atara Men Premium Color Palette */
+  --alabaster: #F9F8F6;
+  --pearl: #FFFFFF;
+  --obsidian: #1A1A1A;
+  --charcoal: #5C5C5C;
+  --antique-gold: #C5A059;
+  --regal-wine: #591C27;
+  --cashmere: #E5E2DC;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-alabaster: var(--alabaster);
+  --color-pearl: var(--pearl);
+  --color-obsidian: var(--obsidian);
+  --color-charcoal: var(--charcoal);
+  --color-antique-gold: var(--antique-gold);
+  --color-regal-wine: var(--regal-wine);
+  --color-cashmere: var(--cashmere);
+  
+  --font-sans: var(--font-montserrat), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-cormorant), ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@utility font-heading {
+  font-family: var(--font-cormorant);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--alabaster);
+  color: var(--charcoal);
+  font-family: var(--font-sans);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  color: var(--obsidian);
+  font-weight: 500;
+}
+
+/* Base Component Styles */
+.text-accent-label {
+  font-family: var(--font-sans);
+  text-transform: uppercase;
+  font-size: 0.75rem; /* 12px */
+  font-weight: 500;
+  letter-spacing: 0.15em;
+}
+
+.btn-primary {
+  background-color: var(--obsidian);
+  color: var(--alabaster);
+  border-radius: 0px;
+  padding: 0.75rem 2rem;
+  font-family: var(--font-sans);
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-align: center;
+}
+.btn-primary:hover {
+  background-color: #000000;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  border: 1px solid var(--obsidian);
+  color: var(--obsidian);
+  border-radius: 0px;
+  padding: 0.75rem 2rem;
+  font-family: var(--font-sans);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-align: center;
+}
+.btn-secondary:hover {
+  background-color: var(--obsidian);
+  color: var(--alabaster);
+}
+
+.luxury-shadow {
+  box-shadow: 0 20px 40px rgba(26, 26, 26, 0.04);
 }
