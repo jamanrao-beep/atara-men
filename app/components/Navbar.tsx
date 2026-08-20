@@ -180,6 +180,7 @@ export default function Navbar() {
             </div>
           </div>
         </div>
+        </div>
 
         {/* Mobile drawer */}
         {mobileOpen && (
