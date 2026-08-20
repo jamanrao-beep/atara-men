@@ -19,6 +19,9 @@ const jost = Jost({
 export const metadata: Metadata = {
   title: "Atara Men | Modern Indian Menswear",
   description: "Premium sherwanis, bandhgalas, and elegant menswear.",
+  icons: {
+    icon: "/icon.png?v=" + new Date().getTime(),
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

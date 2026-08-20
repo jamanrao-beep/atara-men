@@ -34,13 +34,15 @@ export default function CollectionsPage() {
                   sizes="(max-width: 1024px) 100vw, 25vw"
                   className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-obsidian/70 via-obsidian/20 to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 p-8 lg:p-10">
-                  <h2 className="text-2xl md:text-3xl font-serif text-pearl mb-2">{cat.title}</h2>
-                  <p className="text-sm text-pearl/60 font-light mb-4">{cat.description}</p>
-                  <span className="text-xs tracking-[0.15em] uppercase text-pearl border-b border-pearl/50 pb-1 inline-block group-hover:border-pearl transition-colors">
-                    Explore {cat.title}
-                  </span>
+                {/* Solid gradient scrim attached to the text container */}
+                <div className="absolute inset-x-0 bottom-0 pt-24 pb-8 px-8 lg:px-10 flex flex-col justify-end bg-gradient-to-t from-obsidian/90 via-obsidian/60 to-transparent">
+                  <h2 className="text-2xl md:text-3xl font-serif text-pearl mb-2 relative z-10">{cat.title}</h2>
+                  <p className="text-sm text-pearl/80 font-light mb-4 relative z-10">{cat.description}</p>
+                  <div className="relative z-10">
+                    <span className="text-xs tracking-[0.15em] uppercase text-pearl border-b border-pearl/50 pb-1 inline-block group-hover:border-pearl transition-colors">
+                      Explore {cat.title}
+                    </span>
+                  </div>
                 </div>
               </Link>
             ))}

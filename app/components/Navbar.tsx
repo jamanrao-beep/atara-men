@@ -45,28 +45,30 @@ export default function Navbar() {
 
   return (
     <>
-      {/* Top utility bar */}
-      <div className="w-full bg-obsidian text-pearl/80 text-xs py-2 px-6 hidden md:flex justify-between items-center z-50 relative">
-        <div className="flex gap-6">
-          <span className="tracking-wider">INR (₹)</span>
-          <Link href="/contact" className="hover:text-pearl transition-colors tracking-wider">Find Stores</Link>
-        </div>
-        <div className="tracking-widest text-center flex-1">
-          ENJOY A LUXURY FEEL
-        </div>
-        <div className="flex gap-6">
-          <Link href="/contact" className="hover:text-pearl transition-colors tracking-wider">Track Order</Link>
-          <Link href="/contact" className="hover:text-pearl transition-colors tracking-wider">Contact</Link>
-        </div>
-      </div>
+
 
       {/* Main navigation */}
       <header className="w-full z-40 sticky top-0 transition-all duration-500">
         <div 
-          className={`w-full transition-all duration-500 ${
-            scrolled ? "py-4 px-4 md:px-8 bg-transparent" : "py-0 bg-alabaster"
+          className={`w-full transition-all duration-500 relative ${
+            scrolled ? "py-4 px-4 md:px-8 bg-transparent" : "pt-8 pb-0 bg-alabaster"
           }`}
         >
+          {/* Top utility bar - positioned at the top of the header */}
+          <div className={`absolute top-0 left-0 w-full bg-obsidian text-pearl/80 text-xs px-6 md:flex justify-between items-center overflow-hidden transition-all duration-300 ${scrolled ? 'h-0 opacity-0' : 'h-8 opacity-100'}`}>
+            <div className="flex gap-6">
+              <span className="tracking-wider">INR (₹)</span>
+              <Link href="/contact" className="hover:text-pearl transition-colors tracking-wider">Find Stores</Link>
+            </div>
+            <div className="tracking-widest text-center flex-1">
+              ENJOY A LUXURY FEEL
+            </div>
+            <div className="flex gap-6">
+              <Link href="/contact" className="hover:text-pearl transition-colors tracking-wider">Track Order</Link>
+              <Link href="/contact" className="hover:text-pearl transition-colors tracking-wider">Contact</Link>
+            </div>
+          </div>
+
           <div 
             className={`mx-auto transition-all duration-700 ease-in-out ${
               scrolled

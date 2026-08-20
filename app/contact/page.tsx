@@ -19,7 +19,7 @@ export default function ContactPage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
               {[
                 { title: "Visit Us", detail: "Mumbai, Maharashtra\nIndia 400001", icon: "📍" },
-                { title: "Call Us", detail: "+91 98XXX XXXXX\nMon–Sat, 10am–7pm", icon: "📞" },
+                { title: "Call Us", detail: "+91 98200 55555\nMon–Sat, 10am–7pm", icon: "📞" },
                 { title: "Email Us", detail: "hello@ataramen.com\ncustomercare@ataramen.com", icon: "✉️" },
               ].map((c) => (
                 <div key={c.title} className="bg-pearl border border-cashmere p-8 text-center">

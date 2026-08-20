@@ -61,10 +61,10 @@ export default function ProductPage() {
         </div>
 
         {/* Product layout */}
-        <div className="max-w-[1600px] mx-auto px-6 lg:px-10 pb-24">
-          <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
+        <div className="max-w-[1600px] mx-auto px-6 lg:px-10 pb-24 overflow-hidden">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
             {/* Left: Image gallery */}
-            <div className="w-full lg:w-3/5">
+            <div className="lg:col-span-7">
               <FadeIn direction="none">
                 {/* Main image */}
                 <div className="relative aspect-[3/4] bg-pearl border border-cashmere overflow-hidden mb-4">
@@ -105,7 +105,7 @@ export default function ProductPage() {
             </div>
 
             {/* Right: Product info */}
-            <div className="w-full lg:w-2/5 lg:sticky lg:top-28 lg:self-start">
+            <div className="lg:col-span-5 lg:sticky lg:top-28 lg:self-start">
               <FadeIn direction="up" delay={0.3}>
                 <span className="text-accent-label text-antique-gold mb-3 block">{product.collection}</span>
                 <h1 className="text-3xl md:text-4xl font-serif text-obsidian mb-3">{product.title}</h1>
@@ -130,7 +130,9 @@ export default function ProductPage() {
                         }`}
                         style={{ backgroundColor: c.hex }}
                         title={c.name}
-                      />
+                      >
+                        <span className="sr-only">{c.name}</span>
+                      </button>
                     ))}
                   </div>
                 </div>

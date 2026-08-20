@@ -102,7 +102,7 @@ export default function Footer() {
                 type="submit"
                 className="bg-antique-gold text-obsidian px-6 py-3 text-xs tracking-widest uppercase font-medium hover:bg-antique-gold/90 transition-colors"
               >
-                Join
+                Subscribe
               </button>
             </form>
           </div>
@@ -116,9 +116,10 @@ export default function Footer() {
             © 2026 Atara Men. All rights reserved.
           </p>
           <div className="flex gap-6 text-xs text-pearl/40">
-            <Link href="/contact" className="hover:text-pearl/70 transition-colors">Privacy Policy</Link>
-            <Link href="/contact" className="hover:text-pearl/70 transition-colors">Terms of Service</Link>
-            <Link href="/contact" className="hover:text-pearl/70 transition-colors">Shipping Policy</Link>
+            <Link href="/policies/privacy" className="hover:text-pearl/70 transition-colors">Privacy Policy</Link>
+            <Link href="/policies/terms" className="hover:text-pearl/70 transition-colors">Terms of Service</Link>
+            <Link href="/policies/shipping" className="hover:text-pearl/70 transition-colors">Shipping Policy</Link>
+            <Link href="/policies/returns" className="hover:text-pearl/70 transition-colors">Returns & Exchange</Link>
           </div>
         </div>
       </div>

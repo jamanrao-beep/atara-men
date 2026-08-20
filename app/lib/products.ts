@@ -33,28 +33,28 @@ export const categories: Category[] = [
     slug: "bandhgalas",
     title: "Bandhgalas",
     description: "Sharp elegance for every occasion",
-    image: "/assets/images/1.png",
+    image: "/assets/images/13.png",
     count: 4,
   },
   {
     slug: "kurtas",
     title: "Kurta Sets",
     description: "Timeless comfort meets refined style",
-    image: "/assets/images/1.png",
+    image: "/assets/images/32.png",
     count: 5,
   },
   {
     slug: "nehru-jackets",
     title: "Nehru Jackets",
     description: "The finishing touch of distinction",
-    image: "/assets/images/1.png",
+    image: "/assets/images/34.png",
     count: 3,
   },
   {
     slug: "indo-western",
     title: "Indo-Western",
     description: "Where heritage meets contemporary",
-    image: "/assets/images/1.png",
+    image: "/assets/images/20.png",
     count: 4,
   },
 ];
@@ -117,8 +117,8 @@ export const products: Product[] = [
       { name: "Regal Wine", hex: "#591C27" },
     ],
     images: [
-      "/assets/images/1.png",
-      "/assets/images/1.png",
+      "/assets/images/18_e5ec671a-4b96-49d5-8e62-3f465381f8b1.png",
+      "/assets/images/19_f1ebf3f5-414f-4beb-bb5a-f417d1024f23.png",
     ],
     badge: "New Arrival",
   },
@@ -158,8 +158,8 @@ export const products: Product[] = [
       { name: "Obsidian", hex: "#1A1A1A" },
     ],
     images: [
-      "/assets/images/1.png",
-      "/assets/images/1.png",
+      "/assets/images/26_ed1b9753-b5d2-4dba-ab2b-b9fb978f5864.png",
+      "/assets/images/31.png",
     ],
     badge: "Bestseller",
   },
@@ -199,8 +199,8 @@ export const products: Product[] = [
       { name: "Pearl", hex: "#FFFFFF" },
     ],
     images: [
-      "/assets/images/1.png",
-      "/assets/images/1.png",
+      "/assets/images/16_535c7066-c1d8-4ecc-bf45-71e2074ee052.png",
+      "/assets/images/17_4fb7ffb6-a193-4d2c-947c-a158a897b5a6.png",
     ],
   },
   {
@@ -259,8 +259,8 @@ export const products: Product[] = [
       { name: "Ivory", hex: "#F9F8F6" },
     ],
     images: [
-      "/assets/images/1.png",
-      "/assets/images/1.png",
+      "/assets/images/11.png",
+      "/assets/images/20.png",
     ],
   },
   {
@@ -299,8 +299,8 @@ export const products: Product[] = [
       { name: "Antique Gold", hex: "#C5A059" },
     ],
     images: [
-      "/assets/images/1.png",
-      "/assets/images/1.png",
+      "/assets/images/35.png",
+      "/assets/images/15.png",
     ],
     badge: "Trending",
   },

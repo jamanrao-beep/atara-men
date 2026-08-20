@@ -16,7 +16,9 @@ export default function ProductCard({ product }: { product: Product }) {
         />
         {/* Badge */}
         {product.badge && (
-          <span className="absolute top-4 left-4 text-[10px] tracking-[0.15em] uppercase font-medium bg-obsidian text-pearl px-3 py-1.5">
+          <span className={`absolute top-4 left-4 text-[10px] tracking-[0.15em] uppercase font-medium text-pearl px-3 py-1.5 ${
+            product.badge.toLowerCase().includes('new') ? 'bg-antique-gold' : 'bg-obsidian'
+          }`}>
             {product.badge}
           </span>
         )}
@@ -37,8 +39,8 @@ export default function ProductCard({ product }: { product: Product }) {
       </div>
 
       {/* Info */}
-      <div className="flex flex-col gap-1">
-        <span className="text-[10px] tracking-[0.15em] uppercase text-charcoal font-medium">
+      <div className="flex flex-col gap-1 mt-4">
+        <span className="text-[11px] tracking-[0.15em] uppercase text-obsidian font-semibold opacity-80">
           {product.collection}
         </span>
         <h3 className="text-sm font-medium text-obsidian group-hover:text-antique-gold transition-colors">

@@ -22,11 +22,12 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.4 }}
-          className="text-5xl md:text-7xl lg:text-8xl font-serif text-obsidian leading-[0.95] mb-8"
+          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif text-obsidian leading-[1.1] mb-8"
         >
-          Elevate Your
-          <br />
-          <span className="italic font-normal">Everyday Look</span>
+          Hand-Embroidered<br />
+          For Your<br />
+          <span className="italic font-normal">Wedding</span><br />
+          <span className="italic font-normal">Season</span>
         </motion.h1>
 
         <motion.p
@@ -35,20 +36,19 @@ export default function HeroSection() {
           transition={{ duration: 0.8, delay: 0.7 }}
           className="text-charcoal text-lg font-light leading-relaxed max-w-md mb-12"
         >
-          Timeless pieces, modern fits. Designed for confidence.
-          Made for you.
+          Sherwanis, Bandhgalas & Kurtas. Premium Indian menswear crafted with heritage techniques for your most important occasions.
         </motion.p>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.9 }}
-          className="flex flex-wrap gap-4"
+          className="flex flex-col sm:flex-row flex-wrap gap-4"
         >
-          <Link href="/collections" className="btn-primary px-10 py-4 text-sm">
+          <Link href="/collections" className="btn-primary w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 text-xs sm:text-sm text-center">
             Shop New Arrivals
           </Link>
-          <Link href="/collections" className="btn-secondary px-10 py-4 text-sm">
+          <Link href="/collections" className="btn-secondary w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 text-xs sm:text-sm text-center">
             Explore Collections
           </Link>
         </motion.div>
