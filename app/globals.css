@@ -1,14 +1,14 @@
 @import "tailwindcss";
 
 :root {
-  /* Atara Men Premium Color Palette */
-  --alabaster: #F9F8F6;
+  /* Atara Men Quiet Luxury Color Palette */
+  --alabaster: #F4F1EA;
   --pearl: #FFFFFF;
-  --obsidian: #1A1A1A;
-  --charcoal: #5C5C5C;
-  --antique-gold: #C5A059;
-  --regal-wine: #591C27;
-  --cashmere: #E5E2DC;
+  --obsidian: #1B3B36;
+  --charcoal: #1A2421;
+  --antique-gold: #B89947;
+  --regal-wine: #0B132B;
+  --cashmere: #E2E0D9;
 }
 
 @theme inline {
@@ -19,36 +19,46 @@
   --color-antique-gold: var(--antique-gold);
   --color-regal-wine: var(--regal-wine);
   --color-cashmere: var(--cashmere);
-  
-  --font-sans: var(--font-montserrat), ui-sans-serif, system-ui, sans-serif;
-  --font-serif: var(--font-cormorant), ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+
+  --font-sans: var(--font-jost), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-bodoni), ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
 }
 
 @utility font-heading {
-  font-family: var(--font-cormorant);
+  font-family: var(--font-bodoni);
 }
+
+/* Smooth scrolling removed to fix Next.js hydration warning */
 
 body {
   background-color: var(--alabaster);
   color: var(--charcoal);
   font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-serif);
   color: var(--obsidian);
   font-weight: 500;
 }
 
-/* Base Component Styles */
+/* Accent label utility */
 .text-accent-label {
   font-family: var(--font-sans);
   text-transform: uppercase;
-  font-size: 0.75rem; /* 12px */
+  font-size: 0.75rem;
   font-weight: 500;
   letter-spacing: 0.15em;
 }
 
+/* Primary Button */
 .btn-primary {
   background-color: var(--obsidian);
   color: var(--alabaster);
@@ -56,14 +66,23 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0.75rem 2rem;
   font-family: var(--font-sans);
   font-weight: 500;
-  transition: all 0.3s ease;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
   display: inline-block;
   text-align: center;
-}
-.btn-primary:hover {
-  background-color: #000000;
+  white-space: nowrap;
+  cursor: pointer;
+  border: 1px solid var(--obsidian);
 }
 
+.btn-primary:hover {
+  background-color: transparent;
+  color: var(--obsidian);
+}
+
+/* Secondary Button */
 .btn-secondary {
   background-color: transparent;
   border: 1px solid var(--obsidian);
@@ -72,17 +91,46 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0.75rem 2rem;
   font-family: var(--font-sans);
   font-weight: 500;
+  font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
   display: inline-block;
   text-align: center;
+  white-space: nowrap;
+  cursor: pointer;
 }
+
 .btn-secondary:hover {
   background-color: var(--obsidian);
   color: var(--alabaster);
 }
 
+/* Luxury shadow */
 .luxury-shadow {
   box-shadow: 0 20px 40px rgba(26, 26, 26, 0.04);
+}
+
+/* Selection color */
+::selection {
+  background-color: var(--antique-gold);
+  color: var(--pearl);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--alabaster);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--cashmere);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--charcoal);
 }

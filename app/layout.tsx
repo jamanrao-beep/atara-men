@@ -1,31 +1,40 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Montserrat } from "next/font/google";
+import { Bodoni_Moda, Jost } from "next/font/google";
 import "./globals.css";
+import { CartProvider } from "./context/CartContext";
+import CartDrawer from "./components/CartDrawer";
 
-const cormorant = Cormorant_Garamond({
-  variable: "--font-cormorant",
+const bodoni = Bodoni_Moda({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  variable: "--font-bodoni",
+  display: "swap",
 });
 
-const montserrat = Montserrat({
-  variable: "--font-montserrat",
+const jost = Jost({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-jost",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Atara Men",
-  description: "Premium Indian Menswear - Sherwanis, Bandhgalas, and Kurtas",
+  title: "Atara Men | Modern Indian Menswear",
+  description: "Premium sherwanis, bandhgalas, and elegant menswear.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html
       lang="en"
-      className={`${cormorant.variable} ${montserrat.variable} h-full antialiased`}
+      className={`${bodoni.variable} ${jost.variable} h-full antialiased`}
+      suppressHydrationWarning
+      data-scroll-behavior="smooth"
     >
-      <body className="min-h-full flex flex-col font-sans bg-alabaster text-charcoal">{children}</body>
+      <body className="min-h-full flex flex-col font-sans bg-alabaster text-charcoal">
+        <CartProvider>
+          {children}
+          <CartDrawer />
+        </CartProvider>
+      </body>
     </html>
   );
 }
