@@ -45,11 +45,8 @@ export default function HeroSection() {
           transition={{ duration: 0.8, delay: 0.9 }}
           className="flex flex-col sm:flex-row flex-wrap gap-4"
         >
-          <Link href="/collections" className="btn-primary w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 text-xs sm:text-sm text-center">
-            Shop New Arrivals
-          </Link>
-          <Link href="/collections" className="btn-secondary w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 text-xs sm:text-sm text-center">
-            Explore Collections
+          <Link href="/collections" className="btn-primary w-full sm:w-auto px-10 py-4 text-xs sm:text-sm text-center tracking-widest">
+            Explore The Wedding Edit
           </Link>
         </motion.div>
 

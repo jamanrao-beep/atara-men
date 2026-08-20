@@ -238,9 +238,31 @@ export default function CheckoutPage() {
                     </div>
                   </div>
 
-                  <button className="btn-primary w-full py-5 text-sm font-medium tracking-widest bg-obsidian hover:bg-obsidian/90 text-pearl transition-colors">
+                  <button className="btn-primary w-full py-5 text-sm font-medium tracking-widest bg-obsidian hover:bg-obsidian/90 text-pearl transition-colors mb-4">
                     Pay ₹{finalTotal.toLocaleString()}
                   </button>
+
+                  <div className="flex flex-col items-center border-t border-cashmere pt-4 mt-2">
+                    <div className="flex items-center gap-2 text-xs text-charcoal mb-3">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                      </svg>
+                      Guaranteed Safe & Secure Checkout
+                    </div>
+                    <div className="flex gap-3 items-center opacity-70">
+                      {/* Fake Payment Icons */}
+                      <div className="px-2 py-1 bg-pearl border border-cashmere text-[10px] font-bold rounded">VISA</div>
+                      <div className="px-2 py-1 bg-pearl border border-cashmere text-[10px] font-bold rounded">MASTERCARD</div>
+                      <div className="px-2 py-1 bg-pearl border border-cashmere text-[10px] font-bold rounded">AMEX</div>
+                      <div className="px-2 py-1 bg-pearl border border-cashmere text-[10px] font-bold rounded flex items-center gap-1">
+                        <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor">
+                          <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                          <path d="M7 11V7a5 5 0 0 1 10 0v4" stroke="currentColor" strokeWidth="2" fill="none" />
+                        </svg>
+                        SSL
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </motion.div>
             )}

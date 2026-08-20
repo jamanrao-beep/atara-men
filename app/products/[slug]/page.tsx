@@ -10,6 +10,7 @@ import { getProductBySlug, products, sizeChart } from "../../lib/products";
 import ProductCard from "../../components/ProductCard";
 import { useCart } from "../../context/CartContext";
 import FadeIn from "../../components/FadeIn";
+import ProductReviews from "../../components/ProductReviews";
 
 export default function ProductPage() {
   const params = useParams();
@@ -219,6 +220,11 @@ export default function ProductPage() {
               </FadeIn>
             </div>
           </div>
+        </div>
+
+        {/* Reviews */}
+        <div className="max-w-[1600px] mx-auto px-6 lg:px-10 pb-24">
+          <ProductReviews />
         </div>
 
         {/* Related products */}

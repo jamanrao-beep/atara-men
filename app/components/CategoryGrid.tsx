@@ -26,12 +26,10 @@ export default function CategoryGrid() {
               sizes="(max-width: 1024px) 100vw, 25vw"
               className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
             />
-            {/* Dark gradient overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-obsidian/70 via-obsidian/10 to-transparent" />
-            {/* Text at bottom */}
-            <div className="absolute bottom-0 left-0 right-0 p-6">
-              <h3 className="text-lg font-serif text-pearl mb-1">{cat.title}</h3>
-              <p className="text-xs text-pearl/60 font-light tracking-wide">{cat.description}</p>
+            {/* Solid gradient scrim attached to the text container */}
+            <div className="absolute inset-x-0 bottom-0 pt-20 pb-4 px-4 lg:pb-6 lg:px-6 flex flex-col justify-end bg-gradient-to-t from-obsidian/90 via-obsidian/50 to-transparent">
+              <h3 className="text-lg font-serif text-pearl mb-1 relative z-10">{cat.title}</h3>
+              <p className="text-xs text-pearl/80 font-light tracking-wide relative z-10">{cat.description}</p>
             </div>
           </Link>
         ))}
