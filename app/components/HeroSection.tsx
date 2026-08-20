@@ -22,9 +22,9 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.4 }}
-          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif text-obsidian leading-[1.1] mb-8"
+          className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl font-serif text-obsidian leading-[1.1] mb-8 break-words"
         >
-          Hand-Embroidered<br />
+          Crafted<br />
           For Your<br />
           <span className="italic font-normal">Wedding</span><br />
           <span className="italic font-normal">Season</span>
